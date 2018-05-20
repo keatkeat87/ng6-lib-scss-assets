@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MyLibModule } from 'my-lib';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MyLibModule } from 'my-lib';
   ],
   imports: [
     BrowserModule,
-    MyLibModule
+    MyLibModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

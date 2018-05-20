@@ -1,0 +1,37 @@
+@import '~@angular/material/theming'; //@mixins
+
+@function getTheme(){
+    // mat-palette accepts $palette-name, main, lighter and darker variants
+    //$my-theme-primary: mat-palette($mat-indigo, 700);
+    //https://material.io/guidelines/style/color.html#color-color-palette
+    $my-theme-primary: mat-palette($mat-indigo, 900);
+    $my-theme-accent: mat-palette($mat-orange, 700);
+    $my-theme-warn: mat-palette($mat-red, 900);
+
+    // create theme (use mat-dark-theme for themes with dark backgrounds)
+    $my-theme: mat-light-theme(
+        $my-theme-primary,
+        $my-theme-accent,
+        $my-theme-warn
+    );
+    @return $my-theme;
+}
+
+@function getPrimary(){
+    @return mat-color(map-get(getTheme(), primary));
+}
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family :'Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif',
+  $headline: mat-typography-level(18px, 18px, 700),
+  $body-1: mat-typography-level(14px, 14px, 400)
+);
+
+@include mat-core($custom-typography);
+@include angular-material-theme(getTheme());
+
+body{
+    display: none;
+}

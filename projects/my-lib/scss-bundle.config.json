@@ -1,0 +1,4 @@
+{
+    "entry": "projects/my-lib/src/main.scss",
+    "dest": "dist/my-lib/bundled.scss"
+}
