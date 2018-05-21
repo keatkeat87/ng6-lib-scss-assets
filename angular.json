@@ -22,8 +22,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [             
-              "dist/my-lib/bundled.scss"
+            "styles": [   
+              "src/styles.scss"          
             ],
             "scripts": []
           },

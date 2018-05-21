@@ -1,0 +1,8 @@
+@import "./variables"; 
+@import "./mixin"; 
+@import "./basscss"; 
+@import "~@angular/material/theming";
+
+.yangmi{
+    background-image: url('projects/my-lib/src/assets/images/109811944b3c49b98922b945b7fa5e9b.jpeg')
+}

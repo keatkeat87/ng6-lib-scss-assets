@@ -1,4 +1,6 @@
-@import '~@angular/material/theming'; //@mixins
+/* You can add global styles to this file, and also import other style files */
+
+@import 'dist/my-lib/bundled';
 
 @function getTheme(){
     // mat-palette accepts $palette-name, main, lighter and darker variants
@@ -24,7 +26,7 @@
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config(
-  $font-family :'Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif',
+  $font-family: 'Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif',
   $headline: mat-typography-level(18px, 18px, 700),
   $body-1: mat-typography-level(14px, 14px, 400)
 );
@@ -32,6 +34,8 @@ $custom-typography: mat-typography-config(
 @include mat-core($custom-typography);
 @include angular-material-theme(getTheme());
 
-body{
-    display: none;
+body {
+  margin: 0;
+  background: $variables;
 }
+

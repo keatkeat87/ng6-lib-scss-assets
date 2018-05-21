@@ -1,4 +1,4 @@
 {
-    "entry": "projects/my-lib/src/main.scss",
+    "entry": "projects/my-lib/src/lib/scss/styles.scss",
     "dest": "dist/my-lib/bundled.scss"
 }

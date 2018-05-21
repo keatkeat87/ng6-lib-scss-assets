@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// import * as moment from 'moment';
+// // const moment = require('moment');
+// console.log(moment);
 
 @Component({
   selector: 'lib-my-lib',
